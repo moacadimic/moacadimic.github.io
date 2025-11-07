@@ -1,36 +1,141 @@
 ---
-layout: archive
+layout: single
 title: "Publications"
 permalink: /publications/
 author_profile: true
+classes: wide
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<div class="archive">
+<style>
+.page__content .archive { display:block!important; grid-template-columns:none!important; gap:0!important; }
+.page__content .archive ul { padding-left: 0.0rem; }
+.page__content .archive li p { margin: 0.1rem 0 0.3rem 0; }
+</style>
 
-{% include base_path %}
+<style>
+/* Neutralize Minimal Mistakes' .archive grid so items don't get shoved to the right column */
+.page__content .archive {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+  max-width: 100%;
+  margin: 0;
+}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+/* Left-align everything inside the archive block */
+.page__content .archive,
+.page__content .archive * {
+  text-align: left;
+}
+.page__content .archive ul { padding-left: 0.6rem; } /* was 1.25rem */
+
+/* Comfortable bullets + spacing */
+.page__content .archive ul {
+  list-style: disc outside;
+  padding-left: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+.page__content .archive li {
+  margin-bottom: 0.85rem;
+}
+.page__content .archive li p {
+  margin: 0.1rem 0 0.3rem 0;
+}
+
+/* Clear, consistent section spacing */
+.page__content .archive h2 {
+  margin-top: 1.25rem;
+}
+
+/* Small tweak for narrow screens */
+@media (max-width: 1600px) {
+  .page__content .archive ul { padding-left: 0.1rem; }
+}
+</style>
 
 
+<p>[<a href="https://scholar.google.com/citations?user=jSVFlYUAAAAJ&hl=en">Google Scholar</a>] [<a href="/files/CV.pdf">CV</a>]</p>
 
+<p><strong>Policy Compliance, Voice Assistants, and Platform Governance</strong></p>
+<ul>
+<li><p><strong><em>"No Way to Sign Out? Unpacking Non-Compliance with Google Play's App Account Deletion Requirements"</em></strong><br>
+J. Yan, S. Liao, J. Ma, <strong>M. Aldeen</strong>, S. Kumar, L. Cheng.<br>
+USENIX Security Symposium (<strong>USENIX Security</strong>), 2025.</p></li>
+<li><p><strong><em>"SKILLPOV: Towards Accessible and Effective Privacy Notice for Amazon Alexa Skills"</em></strong><br>
+J. Yan, S. Liao, <strong>M. Aldeen</strong>, L. Xing, D. D. Yao, L. Cheng.<br>
+Network and Distributed System Security Symposium (<strong>NDSS</strong>), 2025.</p></li>
+<li><p><strong><em>"A First Look at Privacy Compliance of Zoom Apps"</em></strong><br>
+A. York, <strong>M. Aldeen</strong>, J. Yan, P. Silimkhan, S. Liao, M. D. Pese, L. Cheng.<br>
+IEEE Secure Development Conference (<strong>SecDev</strong>), 2025.</p></li>
+<li><p><strong><em>"AcousticScope: Understanding Biases in Voice Interaction via Automated Acoustic Testing"</em></strong><br>
+S. Zhang, <strong>M. Aldeen</strong>, S. Liao, J. Young, L. Cheng.<br>
+EAI Security and Privacy in Cyber-Physical Systems and Smart Vehicles (<strong>SmartSP</strong>), 2024.</p></li>
+<li><p><strong><em>"End-Users Know Best: Identifying Undesired Behavior of Alexa Skills Through User Review Analysis"</em></strong><br>
+<strong>M. Aldeen</strong>, J. Young, S. Liao, T.-Y. Chang, L. Cheng, H. Cai, H. Hu.<br>
+ACM Interactive, Mobile, Wearable, and Ubiquitous Technologies (<strong>IMWUT / UbiComp</strong>), 2024.</p></li>
+<li><p><strong><em>"Understanding GDPR Non-Compliance in Privacy Policies of Alexa Skills in European Marketplaces"</em></strong><br>
+S. Liao, <strong>M. Aldeen</strong>, J. Yan, L. Cheng, X. Luo, H. Cai, H. Hu.<br>
+The Web Conference (<strong>WWW</strong>), 2024.</p></li>
+<li><p><strong><em>"Zero Trust Security - Technologies, Applications, and Adoption Challenges"</em></strong><br>
+J. Anderson, <strong>M. Aldeen</strong>, S. Zhang, S. Liao, H. Hu, M. Chowdhury, L. Cheng.<br>
+EAI Security and Privacy in Cyber-Physical Systems and Smart Vehicles (<strong>SmartSP</strong>), 2025.</p></li>
+</ul>
+
+<p><strong>AI-Driven Security and Autonomous Systems</strong></p>
+<ul>
+<li><p><strong><em>"Few-Shot Detection of Hate Videos Using Multi-Modal Large Language Models"</em></strong><br>
+J. Ma, <strong>M. S. Aldeen</strong>, F. Luo, L. Cheng.<br>
+ACM Workshop on Deepfake, Deception, and Disinformation Security (<strong>3D-Sec</strong>), 2025.</p></li>
+<li><p><strong><em>"An Initial Exploration of Employing Large Multimodal Models in Defending Against Autonomous Vehicles Attacks"</em></strong><br>
+<strong>M. Aldeen</strong>, P. MohajerAnsari, J. Ma, M. Chowdhury, L. Cheng, M. D. Pese.<br>
+IEEE Intelligent Vehicles Symposium (<strong>IV</strong>), 2024.</p></li>
+<li><p><strong><em>"WIP: A First Look at Employing Large Multimodal Models Against Autonomous Vehicle Attacks"</em></strong><br>
+<strong>M. Aldeen</strong>, P. MohajerAnsari, J. Ma, M. Chowdhury, L. Cheng, M. D. Pese.<br>
+ISOC Vehicle Security and Privacy Symposium (<strong>VehicleSec</strong>), 2024.</p></li>
+<li><p><strong><em>"An Integrated Platform for Online Abuse Research"</em></strong><br>
+<strong>M. Aldeen</strong>, P. Silimkhan, E. Anderson, T. Kavuru, T.-Y. Chang, J. Ma, F. Luo, H. Hu, L. Cheng.<br>
+International Workshop on Cyber Social Threats (<strong>CySoc</strong>), 2024.</p></li>
+<li><p><strong><em>"ChatGPT vs. Human Annotators: A Comprehensive Analysis of ChatGPT for Text Annotation"</em></strong><br>
+<strong>M. Aldeen</strong>, J. Luo, A. Lian, V. Zheng, A. Hong, P. Yetukuri, L. Cheng.<br>
+IEEE International Conference on Machine Learning and Applications (<strong>ICMLA</strong>), 2023.</p></li>
+</ul>
+
+<p><strong>Privacy-Preserving Data Analytics and Defenses</strong></p>
+<ul>
+<li><p><strong><em>"Privacy-Preserving Collaborative Learning for Genome Analysis via Secure XGBoost"</em></strong><br>
+<strong>M. Aldeen</strong>, C. Zhao, Z. Chen, L. Fang, Z. Liu.<br>
+IEEE Transactions on Dependable and Secure Computing (<strong>TDSC</strong>), 2024.</p></li>
+<li><p><strong><em>"EMMasker: EM Obfuscation Against Website Fingerprinting"</em></strong><br>
+<strong>M. Aldeen</strong>, S. Liang, Z. Zhang, L. Guo, Z. Song, L. Cheng.<br>
+Workshop on Measurements, Attacks, and Defenses for the Web (<strong>MADWeb</strong>), 2024.</p></li>
+<li><p><strong><em>"Flexible Privacy-Preserving Machine Learning: When Searchable Encryption Meets Homomorphic Encryption"</em></strong><br>
+H. Jia, <strong>M. Aldeen</strong>, S. Jing, Z. Chen, C. Zhao.<br>
+International Journal of Intelligent Systems, 2022.</p></li>
+<li><p><strong><em>"Rare Variants Analysis in Genetic Association Studies with Privacy Protection via Hybrid System"</em></strong><br>
+<strong>M. Aldeen</strong>, C. Zhao.<br>
+International Conference on Information and Communications Security (<strong>ICICS</strong>), 2021.</p></li>
+<li><p><strong><em>"Privacy-Preserving GWAS Computation on Outsourced Data Encrypted under Multiple Keys Through Hybrid System"</em></strong><br>
+A. Bomai, <strong>M. Aldeen</strong>, C. Zhao.<br>
+IEEE International Conference on Data Science and Advanced Analytics (<strong>DSAA</strong>), 2020.</p></li>
+</ul>
+
+<p><strong>Under Review</strong></p>
+<ul>
+<li><p><strong><em>"Sign2Alexa: Enhancing Accessibility of Voice Personal Assistants for Deaf and Hard-of-Hearing Users"</em></strong><br>
+<strong>M. Aldeen</strong>, J. Yan, J. Ma, L. Cheng.<br>
+Submitted to ACM <strong>UbiComp</strong>, 2025.</p></li>
+<li><p><strong><em>"DisPatch: Disarming Adversarial Patches in Object Detection with Diffusion Models"</em></strong><br>
+J. Ma, <strong>M. Aldeen</strong>, F. Luo, M. Chowdhury, L. Cheng.<br>
+Submitted to IEEE/IFIP <strong>DSN</strong>, 2025.</p></li>
+<li><p><strong><em>"HateShield: Employing Multi-Modal Large Language Models for Hate Video Detection"</em></strong><br>
+J. Ma, <strong>M. Aldeen</strong>, K. Guo, F. Luo, H. Hu, L. Cheng.<br>
+Submitted to The Web Conference (<strong>WWW</strong>), 2025.</p></li>
+<li><p><strong><em>"Assessing and Improving Prompting Large Language Models for Software Vulnerability Analysis"</em></strong><br>
+Y. Nong, G. Yi, <strong>M. Aldeen</strong>, L. Cheng, H. Hu, H. Cai.<br>
+Submitted to ACM Transactions on Software Engineering and Methodology, 2025.</p></li>
+<li><p><strong><em>"Real-World Evaluation of Protocol-Compliant Denial-of-Service Attacks on C-V2X-based Forward Collision Warning Systems"</em></strong><br>
+J. M. Tine, <strong>M. Aldeen</strong>, A. Enan, M. S. Salek, L. Cheng, M. Chowdhury.<br>
+Submitted (arXiv preprint 2508.02805), 2025.</p></li>
+</ul>
+</div>
