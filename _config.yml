@@ -13,9 +13,9 @@ title                    : "Mohammed Aldeen"
 title_separator          : "-"
 name                     : &name "Mohammed Aldeen"
 description              : &description "Security & privacy researcher focused on policy compliance in connected ecosystems"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : "https://moacademic.github.io"
+url                      : "https://moacadimic.github.io"
 baseurl                  : ""
-repository               : "moacademic/moacademic.github.io"
+repository               : "moacadimic/moacadimic.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
